@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+</head>
+<body>   
+    <!-- id="bg" style="background-image: url('{% static "images/sample.jpeg"%}')";--> 
+    <header>
+    <h1 align="center"> <u>SCHOOL MANAGEMENT SYSTEM</u></h1>
+    </header>
+    <br><br><br>
+    <br><br><br>
+
+   
+    <table align="center">
+        <form action="" method="post">
+        <tr>
+            <th>Login ID : <br><br></th>
+            <th><input type="text" name="" id="" placeholder=""><br><br></th>
+        </tr>
+        
+        <tr>
+            <th>Password : <br><br></th>
+            <th><input type="password" name="" id="" placeholder=""> <br><br></th>
+        </tr>
+        
+        <tr>
+            <th><label for="user type">User Type : <br><br></label></th>
+            <th><select name="User Type" id="User Type">
+                <option value="disable" selected>Select User Type</option>
+                <option value="admin">ADMIN</option>
+                <option value="teacher">TEACHER</option>
+                <option value="staff">STAFF</option>
+                <option value="student">STUDENT</option>
+            </select>
+            <br><br></th>
+        </tr>
+        
+        <tr>
+            <th>
+            <input type="submit" name="button" id=""  align="center">
+        </th>
+        <th><BUTTOn type="menu">CLEAR</BUTTOn></th>
+        
+        </tr>
+    </form>
+    </table>
+    
+</body>
+</html>
