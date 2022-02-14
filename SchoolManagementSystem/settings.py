@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-)&xn&rw)c4#$zra$5wcmd7dtlx17$0eb(o930umlh16(ln#jcn
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'nikhil-sms.herokuapp.com'
+    'nikhil-sms.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
