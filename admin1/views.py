@@ -4,4 +4,6 @@ from django.shortcuts import render
 
 def Admin1(request):
     return render(request,'admin.html')
+def Teacher(request):
+    return render(request,'admin-teacher.html')
 
