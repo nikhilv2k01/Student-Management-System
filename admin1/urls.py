@@ -9,6 +9,7 @@ urlpatterns = [
     path('upt',views.update,name="update_teacher"),
     path('src',views.search,name="search_teacher"),
     path('atd',views.t_attendance,name="teacher_attendance"),
+    path('dash',views.dashboard,name="dashboard"),
     path('lgt',views.logout,name="logout"),
 
 ]

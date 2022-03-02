@@ -14,5 +14,7 @@ def search(request):
     return render(request,'search_teacher.html')
 def t_attendance(request):
     return render(request,'teacher_attendance.html')
+def dashboard(request):
+    return render(request,'dashboard.html')
 def logout(request):
     return render(request,'index.html')
