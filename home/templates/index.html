@@ -14,27 +14,27 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <div class="header">
+        <h1 class="head">SCHOOL MANAGEMENT SYSTEM</h1>
+</div>
     <div class="container">
-        <div class="header">
-            <h1>SCHOOL MANAGEMENT SYSTEM</h1>
-        </div>
-
         <div class="semi-container">
-            <form method="get">
-                <div class="form-field">
-                    <input type="text" placeholder="User ID" required />
-                </div>
+                <form method="post">
+                    <div class="form-field">
+                        <input id="user" type="text" placeholder="User ID" required />
+                    </div>
 
-                <div class="form-field">
-                    <input type="password" placeholder="Password" required />
-                </div>
+                    <div class="form-field">
+                        <input id="pass" type="password" placeholder="Password" required />
+                    </div>
 
-                <div class="form-field">
-                   <a href="{% url 'home' %}"> <button class="btn" type="submit">Log in</button></a>
-                </div>
+                    <div class="form-field">
+                        <a href="{% url 'dashboard' %}"> <button id="log" class="btn" type="submit">Log in</button></a>
+                    </div>
+            </form>
         </div>
-        </form>
     </div>
 </body>
 

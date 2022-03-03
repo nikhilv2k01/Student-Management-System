@@ -2,8 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def admin1(request):
-    return render(request,'master.html')
+
 def add(request):
     return render(request,'add_teacher.html')
 def delete(request):

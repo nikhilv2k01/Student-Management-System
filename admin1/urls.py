@@ -3,7 +3,7 @@ from . import views
 from django.urls import path
 
 urlpatterns = [   
-    path('adm',views.admin1,name="home"),
+    
     path('add',views.add,name="add_teacher"),
     path('del',views.delete,name="delete_teacher"),
     path('upt',views.update,name="update_teacher"),
