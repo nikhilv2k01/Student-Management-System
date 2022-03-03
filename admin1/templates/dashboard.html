@@ -1,5 +1,58 @@
 {% extends 'master.html' %}
-{% block content %}
 {% load static %}
-<img src="{% static 'images/admin-logo.png' %}" alt="dash">
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Total Teachers</h1>
+                    <div class="row">
+                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                            <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                <h2 class="mb-0">5</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Total Students</h1>
+                    <div class="row">
+                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                            <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                <h2 class="mb-0">30</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Teachers</h4>
+                    <canvas id="pieChart" style="height:250px"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Students</h4>
+                    <canvas id="barChart" style="height:230px"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -16,5 +16,9 @@ def t_attendance(request):
     return render(request,'teacher_attendance.html')
 def dashboard(request):
     return render(request,'dashboard.html')
+def a_student(request):
+    return render(request,'add_student.html')
+def s_fees(request):
+    return render(request,'students_fees.html')
 def logout(request):
     return render(request,'index.html')

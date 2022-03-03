@@ -10,6 +10,8 @@ urlpatterns = [
     path('src',views.search,name="search_teacher"),
     path('atd',views.t_attendance,name="teacher_attendance"),
     path('dash',views.dashboard,name="dashboard"),
+    path('astd',views.a_student,name="add_student"),
+    path('stdf',views.s_fees,name="student_fees"),
     path('lgt',views.logout,name="logout"),
 
 ]
