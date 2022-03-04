@@ -69,9 +69,9 @@
           <div class="collapse" id="ui-basic">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item"> <a class="nav-link" href="{% url 'add_teacher' %}">Add Teacher</a></li>
-              <li class="nav-item"> <a class="nav-link" href="{% url 'delete_teacher' %}">Teacher List</a></li>
-              <li class="nav-item"> <a class="nav-link" href="{% url 'update_teacher' %}">Post Teacher Attendance</a></li>
-              <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> View Teacher Attendance </a></li>
+              <li class="nav-item"> <a class="nav-link" href="{% url 'teacher_list' %}">Teacher List</a></li>
+              <li class="nav-item"> <a class="nav-link" href="{% url 'post_attendance' %}">Post Teacher Attendance</a></li>
+              <li class="nav-item"> <a class="nav-link" href="{% url 'view_attendance' %}"> View Teacher Attendance </a></li>
             </ul>
           </div>
         </li>
@@ -86,7 +86,7 @@
           <div class="collapse" id="auth">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item"> <a class="nav-link" href="{% url 'add_student' %}"> Add Student </a></li>
-              <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Student List </a></li>
+              <li class="nav-item"> <a class="nav-link" href="{% url 'student_list' %}"> Student List </a></li>
               <li class="nav-item"> <a class="nav-link" href="{% url 'student_fees' %}"> Student Fees Details </a>
               </li>
             </ul>
