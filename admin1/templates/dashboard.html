@@ -3,56 +3,243 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-6 grid-margin">
+        <div class="col-lg-4 col-sm-6">
             <div class="card">
-                <div class="card-body">
-                    <h1>Total Teachers</h1>
-                    <div class="row">
-                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                            <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                <h2 class="mb-0">5</h2>
-                            </div>
-                        </div>
+                <div class="stat-widget-one card-body">
+                    <div class="stat-icon d-inline-block">
+                        <i class="ti-user text-primary border-primary"></i>
+                    </div>
+                    <div class="stat-content d-inline-block">
+                        <div class="stat-text">Total Students</div>
+                        <div class="stat-digit">30</div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="col-sm-6 grid-margin">
+        <div class="col-lg-4 col-sm-6">
             <div class="card">
-                <div class="card-body">
-                    <h1>Total Students</h1>
-                    <div class="row">
-                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                            <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                <h2 class="mb-0">30</h2>
-                            </div>
-                        </div>
+                <div class="stat-widget-one card-body">
+                    <div class="stat-icon d-inline-block">
+                        <i class="ti-user text-primary border-primary"></i>
+                    </div>
+                    <div class="stat-content d-inline-block">
+                        <div class="stat-text">Total Teachers</div>
+                        <div class="stat-digit">10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="card">
+                <div class="stat-widget-one card-body">
+                    <div class="stat-icon d-inline-block">
+                        <i class="ti-layout-grid2 text-pink border-pink"></i>
+                    </div>
+                    <div class="stat-content d-inline-block">
+                        <div class="stat-text">Events</div>
+                        <div class="stat-digit">5</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="row">
-        <div class="col-lg-6 grid-margin stretch-card">
+        <div class="col-lg-12">
             <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">All Exam Result</h4>
+                </div>
                 <div class="card-body">
-                    <h4 class="card-title">Teachers</h4>
-                    <canvas id="pieChart" style="height:250px"></canvas>
+                    <div class="table-responsive">
+                        <table class="table student-data-table m-t-20">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Grade Point</th>
+                                    <th>Percent Form</th>
+                                    <th>Percent Upto</th>
+                                    <th>Total Mark</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Class Test</td>
+                                    <td>Mathmatics</td>
+                                    <td>
+                                        4.00
+                                    </td>
+                                    <td>
+                                        95.00
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                    <td>20/04/2017</td>
+                                </tr>
+                                <tr>
+                                    <td>Class Test</td>
+                                    <td>Mathmatics</td>
+                                    <td>
+                                        4.00
+                                    </td>
+                                    <td>
+                                        95.00
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                    <td>20/04/2017</td>
+                                </tr>
+                                <tr>
+                                    <td>Class Test</td>
+                                    <td>English</td>
+                                    <td>
+                                        4.00
+                                    </td>
+                                    <td>
+                                        95.00
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                    <td>20/04/2017</td>
+                                </tr>
+                                <tr>
+                                    <td>Class Test</td>
+                                    <td>Bangla</td>
+                                    <td>
+                                        4.00
+                                    </td>
+                                    <td>
+                                        95.00
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                    <td>20/04/2017</td>
+                                </tr>
+                                <tr>
+                                    <td>Class Test</td>
+                                    <td>Mathmatics</td>
+                                    <td>
+                                        4.00
+                                    </td>
+                                    <td>
+                                        95.00
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                    <td>20/04/2017</td>
+                                </tr>
+                                <tr>
+                                    <td>Class Test</td>
+                                    <td>English</td>
+                                    <td>
+                                        4.00
+                                    </td>
+                                    <td>
+                                        95.00
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                    <td>20/04/2017</td>
+                                </tr>
+                                <tr>
+                                    <td>Class Test</td>
+                                    <td>Mathmatics</td>
+                                    <td>
+                                        4.00
+                                    </td>
+                                    <td>
+                                        95.00
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                    <td>20/04/2017</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-lg-6 col-xl-4 col-xxl-6 col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Events</h4>
+                </div>
+                <div class="card-body">
+                    <div class="widget-timeline">
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-badge primary"></div>
+                                <a class="timeline-panel text-muted" href="#">
+                                    <span>10 minutes ago</span>
+                                    <h6 class="m-t-5">Youtube, a video-sharing website, goes live.</h6>
+                                </a>
+                            </li>
 
-        <div class="col-lg-6 grid-margin stretch-card">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Students</h4>
-                    <canvas id="barChart" style="height:230px"></canvas>
+                            <li>
+                                <div class="timeline-badge warning">
+                                </div>
+                                <a class="timeline-panel text-muted" href="#">
+                                    <span>20 minutes ago</span>
+                                    <h6 class="m-t-5">Mashable, a news website and blog, goes live.</h6>
+                                </a>
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge danger">
+                                </div>
+                                <a class="timeline-panel text-muted" href="#">
+                                    <span>30 minutes ago</span>
+                                    <h6 class="m-t-5">Google acquires Youtube.</h6>
+                                </a>
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge success">
+                                </div>
+                                <a class="timeline-panel text-muted" href="#">
+                                    <span>15 minutes ago</span>
+                                    <h6 class="m-t-5">StumbleUpon is acquired by eBay. </h6>
+                                </a>
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge warning">
+                                </div>
+                                <a class="timeline-panel text-muted" href="#">
+                                    <span>20 minutes ago</span>
+                                    <h6 class="m-t-5">Mashable, a news website and blog, goes live.</h6>
+                                </a>
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge dark">
+                                </div>
+                                <a class="timeline-panel text-muted" href="#">
+                                    <span>20 minutes ago</span>
+                                    <h6 class="m-t-5">Mashable, a news website and blog, goes live.</h6>
+                                </a>
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge info">
+                                </div>
+                                <a class="timeline-panel text-muted" href="#">
+                                    <span>30 minutes ago</span>
+                                    <h6 class="m-t-5">Google acquires Youtube.</h6>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </div>
 {% endblock %}
