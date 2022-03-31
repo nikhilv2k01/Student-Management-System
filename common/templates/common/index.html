@@ -20,22 +20,15 @@
         <h1 class="head">SKY HIGH SCHOOL</h1>
 </div>
     <div class="container">
-        <div class="semi-container">
-                <form method="post">
-                    <div class="form-field">
-                        <input id="user" type="text" placeholder="User ID" required />
-                    </div>
-
-                    <div class="form-field">
-                        <input id="pass" type="password" placeholder="Password" required />
-                    </div>
-
-                    <div class="form-field">
-                        <a href="{% url 'dashboard' %}"> <button id="log" class="btn" type="submit">Log in</button></a>
-                    </div>
-            </form>
-        </div>
+        <div class="jumbotron" style="margin-bottom: 0px;padding-top: 480px;">
+            <center><p class="lead">
+              <a class="btn btn-primary btn-lg" href="{% url 'admin_login' %}" role="button">Admin Login</a>
+              <a class="btn btn-danger btn-lg" href="{% url 'teacher_login' %}" role="button">Teacher Login</a>
+              <a class="btn btn-success btn-lg" href="{% url 'student_login' %}" role="button">Student Login</a>
+            </p></center>
+            </div>
     </div>
 </body>
 
 </html>
+
