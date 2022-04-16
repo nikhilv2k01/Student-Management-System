@@ -2,6 +2,7 @@ from unicodedata import name
 from . import views
 from django.urls import path
 
+app_name='teacher'
 urlpatterns = [   
     # path('dashboard',views.dashboard,name="dashboard"),
     # path('add-teacher',views.add_teacher,name="add_teacher"),

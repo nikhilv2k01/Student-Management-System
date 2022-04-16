@@ -2,6 +2,7 @@ from unicodedata import name
 from . import views
 from django.urls import path
 
+app_name='common'
 urlpatterns = [   
     path('',views.common,name="common"),
     path('admlogin',views.login,name="admin_login"),

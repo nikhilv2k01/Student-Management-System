@@ -23,14 +23,15 @@
                           <div class="col-xl-12">
                               <div class="auth-form">
                                   <h4 class="text-center mb-4">ADMIN LOGIN</h4>
-                                  <form action="index.html">
+                                  <form action="" method="POST" enctype="multipart/form-data">
+                                      {% csrf_token %}
                                       <div class="form-group">
                                           <label><strong>User ID</strong></label>
-                                          <input type="email" class="form-control">
+                                          <input type="text" name="username" class="form-control">
                                       </div>
                                       <div class="form-group">
                                           <label><strong>Password</strong></label>
-                                          <input type="password" class="form-control">
+                                          <input type="password" name="password" class="form-control">
                                       </div>
                                       <div class="form-row d-flex justify-content-between mt-4 mb-2">
                                           <div class="form-group">
@@ -43,6 +44,7 @@
                                               <a href="">Forgot Password?</a>
                                           </div>
                                       </div>
+                                      <small style="color: red;">{{err_msg}}</small>
                                       <div class="text-center">
                                           <button type="submit" class="btn btn-primary btn-block">Sign me in</button>
                                       </div>
