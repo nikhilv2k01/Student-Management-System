@@ -13,6 +13,9 @@ urlpatterns = [
     path('add-student', views.add_student, name="add_student"),
     path('student-fees', views.student_fees, name="student_fees"),
     path('student-list', views.student_list, name="student_list"),
-    path('log-out', views.logout, name="logout"),
+    path('view-class/<int:id>', views.view_class, name="view_class"),
+    path('view-certificate/<int:id>', views.view_certificate, name="view_certificate"),
+    path('teacher-edit',views.teacher_edit, name='teacher_edit'),
+    path('logout', views.admin_logout, name="logout"),
 
 ]

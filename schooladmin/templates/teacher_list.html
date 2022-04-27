@@ -2,392 +2,95 @@
 {% block content %}
 {% load static %}
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Teacher List</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table id="example" class="table table-hover  " style="min-width: 845px; color: black;">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th>Teacher Name</th>
-                                        <th>Teacher ID</th>
-                                        <th>Class</th>
-                                        <th>Subject</th>
-                                        <th> Contact</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="table-light">
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>T0001</td>
-                                        <td>10TH</td>
-                                        <td>Maths</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>T0002</td>
-                                        <td>10TH</td>
-                                        <td>Chemistry</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                 
+<head>
+
+</head>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Teacher List</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="example" class="table table-hover  " style="min-width: 845px; color: black;">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Teacher Name</th>
+                                    <th>Phone No</th>
+                                    <th>Salary</th>
+                                    <th>View Class</th>
+                                    <th>View Certificate</th>
+                                    <th>Action</th>
                                 </tr>
+                            </thead>
+                            <tbody class="table-light">
+                                {% for t in teacher %}
+                                <form action="" method="POST">
+                                    {% csrf_token %}
                                     <tr>
-                                        <td>Ashton Cox</td>
-                                        <td>T0003</td>
-                                        <td>10TH</td>
-                                        <td>Social Science</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                 
-                               </tr>
-                                    <tr>
-                                        <td>Cedric Kelly</td>
-                                        <td>T0004</td>
-                                        <td>10TH</td>
-                                        <td>Biology</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                 
-                               </tr>
-                                    <tr>
-                                        <td>Airi Satou</td>
-                                        <td>T0005</td>
-                                        <td>10TH</td>
-                                        <td>English</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                 
-                               </tr>
-                                    <tr>
-                                        <td>Brielle Williamson</td>
-                                        <td>T0006</td>
-                                        <td>10TH</td>
-                                        <td>Malayalam</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                  
-                              </tr>
-                                    <tr>
-                                        <td>Herrod Chandler</td>
-                                        <td>T0007</td>
-                                        <td>10TH</td>
-                                        <td>Physic</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                  
-                              </tr>
-                                    <tr>
-                                        <td>Rhona Davidson</td>
-                                        <td>T0008</td>
-                                        <td>10TH</td>
-                                        <td>Hindi</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                  
-                              </tr>
-                                    <tr>
-                                        <td>Colleen Hurst</td>
-                                        <td>T0009</td>
-                                        <td>9TH</td>
-                                        <td>Maths</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                 
-                               </tr>
-                                    <tr>
-                                        <td>Sonya Frost</td>
-                                        <td>T0010</td>
-                                        <td>9TH</td>
-                                        <td>Biology</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                  
-                              </tr>
-                                    <tr>
-                                        <td>Jena Gaines</td>
-                                        <td>T0011</td>
-                                        <td>9TH</td>
-                                        <td>Physic</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                   
-                             </tr>
-                                    <tr>
-                                        <td>Quinn Flynn</td>
-                                        <td>T0012</td>
-                                        <td>9TH</td>
-                                        <td>Chemistry</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                  
-                              </tr>
-                                    <tr>
-                                        <td>Charde Marshall</td>
-                                        <td>T0013</td>
-                                        <td>9TH</td>
-                                        <td>English</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                  
-                              </tr>
-                                    <tr>
-                                        <td>Haley Kennedy</td>
-                                        <td>T0014</td>
-                                        <td>9TH</td>
-                                        <td>Malayalam</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                  
-                              </tr>
-                                    <tr>
-                                        <td>Tatyana Fitzpatrick</td>
-                                        <td>T0015</td>
-                                        <td>9TH</td>
-                                        <td>Hindi</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                 
-                               </tr>
-                                    <tr>
-                                        <td>Michael Silva</td>
-                                        <td>T0016</td>
-                                        <td>9TH</td>
-                                        <td>Social Science</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                
-                                </tr>
-                                    <tr>
-                                        <td>Paul Byrd</td>
-                                        <td>T0017</td>
-                                        <td>8TH</td>
-                                        <td>Social Science</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                               
-                                 </tr>
-                                    <tr>
-                                        <td>Gloria Little</td>
-                                        <td>T0018</td>
-                                        <td>8TH</td>
-                                        <td>Maths</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                               
-                                 </tr>
-                                    <tr>
-                                        <td>Bradley Greer</td>
-                                        <td>T0019</td>
-                                        <td>8TH</td>
-                                        <td>Biology</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                             
-                                   </tr>
-                                    <tr>
-                                        <td>Dai Rios</td>
-                                        <td>T0020</td>
-                                        <td>8TH</td>
-                                        <td>Physic</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                             
-                                   </tr>
-                                    <tr>
-                                        <td>Jenette Caldwell</td>
-                                        <td>T0021</td>
-                                        <td>8TH</td>
-                                        <td>Chemistry</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                          
-                                      </tr>
-                                    <tr>
-                                        <td>Yuri Berry</td>
-                                        <td>T0022</td>
-                                        <td>8TH</td>
-                                        <td>Hindi</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                          
-                                      </tr>
-                                    <tr>
-                                        <td>Caesar Vance</td>
-                                        <td>T0023</td>
-                                        <td>8TH</td>
-                                        <td>English</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                                 
-                               </tr>
-                                    <tr>
-                                        <td>Doris Wilder</td>
-                                        <td>T0024</td>
-                                        <td>8TH</td>
-                                        <td>Malayalam</td>
-                                        <td>7012952147</td>
-                                        <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
-                                            data-placement="top" title="Edit"><i
-                                                class="fa fa-pencil color-muted"></i> </a><a
-                                            href="javascript:void()" data-toggle="tooltip"
-                                            data-placement="top" title="Close"><i
-                                                class="fa fa-close color-danger"></i></a></span>
-                                </td>                             
-                                   </tr>
-                                    
-                                </tbody>
-                               
-                            </table>
-                        </div>
+                                        <td>{{ t.first_name }}</td>
+                                        <td>{{ t.contact_number }}</td>
+                                        <td>{{ t.salary }}</td>
+
+
+                                        <td><a class="btn btn-warning btn-xs"
+                                                href="{% url 'school_admin:view_class' t.id %} "><span
+                                                    class="glyphicon glyphicon-eye-open">view</span></a></td>
+                                        <td><a class="btn btn-success btn-xs"
+                                                href="{% url 'school_admin:view_certificate' t.id %}"><span
+                                                    class="glyphicon glyphicon-eye-open">view</span></a></td>
+
+                                        <td><span><a href="{% url 'school_admin:teacher_edit' %}" class="mr-4"
+                                                    data-toggle="tooltip" data-placement="top" title="Edit"><i
+                                                        class="fa fa-pencil color-muted"
+                                                        style="color: rgb(0, 0, 0);"></i> </a>
+                                                    
+                                                <button class="btn btn-rounded btn-outline-primary">
+                                                    <input type="hidden"  name="close_btn" value="{{t.id}}" id="">
+                                                <a href="" data-toggle="tooltip" data-placement="top" title="Close"><i
+                                                        style="color: red;"
+                                                        class="fa fa-close color-danger "></i></a></button></span>
+
+                                                    
+
+                                           
+                                        </td>
+                                    </tr>
+
+
+                                </form>
+                                {% endfor %}
+
+                            </tbody>
+
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <!--**********************************
         Scripts
     ***********************************-->
-    <!-- Required vendors -->
-    <script src="{% static './vendor/global/global.min.js' %}"></script>
-    <script src="{% static './js/quixnav-init.js' %}"></script>
-    <script src="{% static './js/custom.min.js' %}"></script>
-    
+<!-- Required vendors -->
+<script src="{% static './vendor/global/global.min.js' %}"></script>
+<script src="{% static './js/quixnav-init.js' %}"></script>
+<script src="{% static './js/custom.min.js' %}"></script>
 
 
-    <!-- Datatable -->
-    <script src="{% static './js/quixnav-init.js' %}"></script>
-    <script src="{% static './js/quixnav-init.js' %}"></script>
-    <script src="{% static './vendor/datatables/js/jquery.dataTables.min.js' %}"></script>
-    <script src="{% static './js/quixnav-init.js' %}"></script>
-    <script src="{% static './js/plugins-init/datatables.init.js' %}"></script>
 
-    <!-- Sweet Alert -->
-    <script src="{% static './vendor/sweetalert2/dist/sweetalert2.min.js' %}"></script>
-    <script src="{% static './js/plugins-init/sweetalert.init.js' %}"></script>
+<!-- Datatable -->
+<script src="{% static './js/quixnav-init.js' %}"></script>
+<script src="{% static './js/quixnav-init.js' %}"></script>
+<script src="{% static './vendor/datatables/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static './js/quixnav-init.js' %}"></script>
+<script src="{% static './js/plugins-init/datatables.init.js' %}"></script>
+
+<!-- Sweet Alert -->
+<script src="{% static './vendor/sweetalert2/dist/sweetalert2.min.js' %}"></script>
+<script src="{% static './js/plugins-init/sweetalert.init.js' %}"></script>
 {% endblock %}
