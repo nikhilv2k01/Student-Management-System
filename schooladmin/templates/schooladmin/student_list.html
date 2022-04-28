@@ -1,6 +1,8 @@
-{% extends 'teacher/master.html' %}
-{% load static %}
+{% extends 'schooladmin/master.html' %}
 {% block content %}
+{% load static %}
+
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
@@ -15,27 +17,27 @@
                                 <tr>
                                     <th>Student Name</th>
                                     <th>Phone No</th>
-                                    <th>a</th>
+                                    <th>Guardian Name</th>
                                     <th>View Class</th>
                                     <th>View Certificate</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody class="table-light">
-                                {% for t in teacher %}
+                                {% for s in student %}
                                 <form action="" method="POST">
                                     {% csrf_token %}
                                     <tr>
-                                        <td>{{ t.first_name }}</td>
-                                        <td>{{ t.contact_number }}</td>
-                                        <td>{{ t.salary }}</td>
+                                        <td>{{ s.student_name }}</td>
+                                        <td>{{ s.contact_number }}</td>
+                                        <td>{{ s.father_name }}</td>
 
 
                                         <td><a class="btn btn-warning btn-xs"
-                                                href="{% url 'school_admin:view_class' t.id %} "><span
+                                                href="{% url 'school_admin:view_class' s.id %} "><span
                                                     class="glyphicon glyphicon-eye-open">view</span></a></td>
                                         <td><a class="btn btn-success btn-xs"
-                                                href="{% url 'school_admin:view_certificate' t.id %}"><span
+                                                href="{% url 'school_admin:view_certificate' s.id %}"><span
                                                     class="glyphicon glyphicon-eye-open">view</span></a></td>
 
                                         <td><span><a href="{% url 'school_admin:teacher_edit' %}" class="mr-4"
@@ -44,7 +46,7 @@
                                                         style="color: rgb(0, 0, 0);"></i> </a>
                                                     
                                                 <button class="btn btn-rounded btn-outline-primary">
-                                                    <input type="hidden"  name="close_btn" value="{{t.id}}" id="">
+                                                    <input type="hidden"  name="close_btn" value="{{s.id}}" id="">
                                                 <a href="" data-toggle="tooltip" data-placement="top" title="Close"><i
                                                         style="color: red;"
                                                         class="fa fa-close color-danger "></i></a></button></span>

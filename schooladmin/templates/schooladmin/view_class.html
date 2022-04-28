@@ -1,6 +1,7 @@
-{% extends 'master.html' %}
+{% extends 'schooladmin/master.html' %}
 {% block content %}
 {% load static %}
+
 
 <div class="container-fluid">
     <div class="row">
@@ -18,8 +19,8 @@
                                 <thead>
                                     <tr>
 
-                                        <th>Qualification</th>
-                                        <th>Certificate</th>
+                                        <th>Class</th>
+                                        <th>Subject Name</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -27,15 +28,15 @@
 
                                     <tr>
 
-                                        <td>{{ view_certificate.teacher_class }}</td>
-                                        <td>{{ view_certificate.course }}</td>
+                                        <td>{{ view_class.teacher_class }}</td>
+                                        <td>{{ view_class.course }}</td>
                                         <td>
                                             <span><a href="" class="mr-4" data-toggle="tooltip" data-placement="top"
                                                     title="Edit"><i class="fa fa-pencil color-muted"
                                                         style="color: rgb(0, 0, 0);"></i> </a>
 
                                                 <button class="btn btn-rounded btn-outline-primary">
-                                                    <input type="hidden" name="view_certificate_btn" value="{{view_certificate.id}}"
+                                                    <input type="hidden" name="view_class_btn" value="{{view_class.id}}"
                                                         id="">
                                                     <a href="" data-toggle="tooltip" data-placement="top"
                                                         title="Close"><i style="color: red;"

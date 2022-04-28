@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Teacher</title>
 
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{% static './schooladmin/images/favicon.png' %}">
@@ -179,25 +179,23 @@
                                 class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a></li>
                     </li>
                     
-                    <!-- <li class="nav-label">Student</li> -->
-                    
-                    <!-- <li><a class="has-arrow" href="{% static 'javascript:void()' %}" aria-expanded="false"><i
-                                class="icon icon-world-2"></i><span class="nav-text">Student</span></a> -->
-                        <!-- <ul aria-expanded="false"> -->
+                   
                             <li><a href="{% url 'teacher:student_list' %}" aria-expanded="false"><i
                                 class="icon icon-single-04"></i><span class="nav-text">Student List</span></a></li>
-                        <!-- </ul> -->
-                        <!-- <li class="nav-label">Exam</li> -->
+                        
                     <li><a href="{% url 'teacher:exam' %}" aria-expanded="false"><i class="icon icon-globe-2"></i><span
                         class="nav-text">Exam</span></a></li>
                     </li>
                 
                     
-                    <!-- <li class="nav-label">Timetable</li> -->
+                    
                     <li>
                             <li><a href="{% url 'teacher:timetable' %}" aria-expanded="false"><i class="icon icon-globe-2"></i><span
                                 class="nav-text">Time Table</span></a></li>
                         
+                    </li>
+                    <li><a href="{% url 'teacher:change_pass' %}" aria-expanded="false"><i class="icon icon-globe-2"></i><span
+                        class="nav-text">Change Password</span></a></li>
                     </li>
             </div>
         </div>

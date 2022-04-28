@@ -87,7 +87,7 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'school_management_system',
+        'NAME' : 'sms',
         'USER' : 'postgres',
         'PASSWORD' : 'nn2479',
         'HOST' : 'localhost',

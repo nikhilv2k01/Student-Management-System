@@ -1,3 +1,4 @@
+from re import M
 from statistics import mode
 from django.db import models
 
@@ -20,4 +21,22 @@ class AddTeachers(models.Model):
 
     class Meta:
         db_table='add_teacher'
+
+
+class AddStudent(models.Model):
+    student_name=models.CharField(max_length=20)
+    date_of_birth=models.CharField(max_length=100)
+    father_name=models.CharField(max_length=20)
+    mother_name=models.CharField(max_length=20)
+    gender=models.CharField(max_length=20)
+    contact_number=models.BigIntegerField()
+    student_class=models.CharField(max_length=20)
+    course=models.CharField(max_length=20)
+    email=models.CharField(max_length=100)
+    address=models.CharField(max_length=100)
+    fees=models.BigIntegerField()
+    certificate=models.ImageField(upload_to='product/')
+
+    class Meta:
+        db_table='add_student'
 

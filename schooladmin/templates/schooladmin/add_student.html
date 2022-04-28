@@ -1,0 +1,143 @@
+{% extends 'schooladmin/master.html' %}
+{% block content %}
+{% load static %}
+<div class="col-12 grid-margin">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Add Student</h4>
+      <form class="form-sample" action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p class="card-description"> Personal info </p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Student Name</label>
+              <div class="col-sm-9">
+                <input type="text" name="student_name" class="form-control" placeholder="Student Name" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Date of Birth</label>
+              <div class="col-sm-9">
+                <input class="form-control" name="dateofbirth" type="date" placeholder="dd/mm/yyyy" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Father Name</label>
+              <div class="col-sm-9">
+                <input type="text" name="father_name" class="form-control" placeholder="Father Name" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Mother Name</label>
+              <div class="col-sm-9">
+                <input type="text" name="mother_name" class="form-control" placeholder="Mother Name" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Gender</label>
+              <div class="col-sm-9">
+                <input type="radio" name="gender" value="male" id="" required>male
+                <input type="radio" name="gender" value="female" id="" required>female
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Contact Number</label>
+          <div class="col-sm-9">
+            <input type="text" name="contact_number" class="form-control"  placeholder="Contact number" />
+          </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+          </div>
+        </div>
+
+
+        
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Class</label>
+              <div class="col-sm-9">
+                <select name="class" class="form-control">
+                  <option>+1</option>
+                  <option>+2</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Course</label>
+              <div class="col-sm-9">
+                <select name="course" class="form-control">
+                  <option>Bio Science</option>
+                  <option>Computer Science</option>
+                  <option>physical Science</option>
+                  <option>Commerce</option>
+                  <option>Humanities</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="email" name="email" class="form-control" placeholder="Email" required />
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Address</label>
+              <div class="col-sm-9">
+                <input type="text" name="address" class="form-control" placeholder="Address" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Fees</label>
+              <div class="col-sm-9">
+                <input type="text" name="fees" class="form-control" placeholder="Fees" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Certificate</label>
+              <input type="file" name="certificate" id="">
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <button class="btn btn-dark">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

@@ -14,4 +14,10 @@ def student_list(request):
 def time_table(request):
     return render(request,'teacher/timetable.html')
 
+def change_pass(request):
+    return render(request,'teacher/change_pass.html')
+
+
+
+
 
