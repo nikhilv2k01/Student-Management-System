@@ -23,9 +23,6 @@ def login(request):
         else:
             msg = 'invalid username or password !'
         
-
-            
-
     return render(request, 'common/admin_login.html', {'err_msg': msg, })
 
 

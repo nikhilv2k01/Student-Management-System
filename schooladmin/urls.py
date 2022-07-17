@@ -17,5 +17,6 @@ urlpatterns = [
     path('view-certificate/<int:id>', views.view_certificate, name="view_certificate"),
     path('teacher-edit',views.teacher_edit, name='teacher_edit'),
     path('logout', views.admin_logout, name="logout"),
+    path('home', views.home, name="home"),
 
 ]

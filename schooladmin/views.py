@@ -1,8 +1,22 @@
 import re
 from django.shortcuts import render, redirect
 from . models import *
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from django.core.mail import send_mail
+from django.conf import settings
+
+import string
+import random
+
+
 
 # Create your views here.
+
+@api_view(['GET'])
+def home(request):
+    message='congrats'
+    return Response(message)
 
 
 def dashboard(request):
@@ -74,6 +88,18 @@ def add_student(request):
                              mother_name=mother_name, gender=gender, contact_number=contact_number, student_class=student_class, course=course, email=email, address=address, fees=fees, certificate=certificate)
 
         student.save()
+        # initializing size of string 
+        N = 7
+        # generating random strings 
+        res = ''.join(random.choices(string.ascii_uppercase +
+                             string.digits, k = N))
+
+        to = email
+        subject = 'School user id and password'
+        msg = ""
+        send_mail(subject, msg, settings.EMAIL_HOST_USER, [to, ])
+    return redirect('customer:cust_home')
+
 
     return render(request, 'schooladmin/add_student.html')
 
@@ -90,7 +116,7 @@ def student_list(request):
 
 def view_class(request, id):
     view_class = AddTeachers.objects.get(id=id)
-
+    
     if request.method == 'POST':
         close_btn = request.POST['view_class_btn']
         teacher = AddTeachers.objects.get(id=close_btn)
@@ -115,5 +141,6 @@ def teacher_edit(request):
 
 
 def admin_logout(request):
+    del request.session['admin_id']
     request.session.flush()
     return redirect('common:common')
